@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  img(src="#{user.picture}")
+  h2 Welcome #{user.nickname}!
+
+    form#formAddUser(name="adduser", method = "post", action="/adduser")
+    input#inputUserName(type="test", placeholder="username", name="username")
+    input#inputUserEmail(type="test", placeholder="useremail", name="useremail")
+    input#inputUserComment(type="test", placeholder="usercomment", name="usercomment")
+    button#btnSubmmit(type="submit") submit
+
+  br
+  a(href='/logout') Logout

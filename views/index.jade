@@ -1,0 +1,35 @@
+block content
+  h1= title
+  p Welcome to #{title}
+  br
+  a(href="/login")
+    button() Login
+
+extends layout
+
+block content
+    h1.
+     Welcome to my Guestbook Mon
+    form#formAddUser(name="adduser", method = "post", action="/adduser")
+      input.form-group#inputUserName(type="test", placeholder="username", name="username" required)
+      input.form-group#inputUserEmail(type="email", placeholder="useremail", name="useremail" required)
+      input.form-group#inputUserComment(type="test", placeholder="usercomment", name="usercomment" required)
+      button.btn.btn-info#btnSubmmit(type="submit")  submit
+
+      .tablestyle
+        table.table.table-hover
+         thead
+          tr
+           td Name
+           td Email
+           td Comments
+           td
+         tbody
+          each user, i in userlist
+           tr
+            td
+             a(href="#{user._id}/usermessage")= user.username
+            td #{user.email}
+            td #{user.comment}
+            td
+             a.btn.btn-danger(href="#{user._id}") Delete

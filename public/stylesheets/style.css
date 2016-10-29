@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif ;
+  color: green;
+  font-family: 'Gloria Hallelujah', cursive;
+  background-image:url("/images/pointingbob.jpeg");
+  background-size: contain;
+  background-size :100%;
+}
+
+h1 {
+  color: red;
+}
+
+
+.tablestyle {
+  background: rgba(255, 255, 0, 0.5);
+}
+.tablestyle:hover {
+  background: rgba(255, 0, 0, 0.5);
+}
+
+a {
+  color: #00B7FF;
+}
+input {
+  background-color: yellow;
+}
+btnSubmmit {
+  background: yellow;
+}
